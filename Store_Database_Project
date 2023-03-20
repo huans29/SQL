@@ -1,0 +1,29 @@
+-- create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item text, aisle INTEGER, price real, quantity integer) ;
+
+INSERT INTO store VALUES 
+(1, "tissues", 3, 8.39, 10),
+(2, "eggs", 1, 4.99, 7),
+(3, "spam", 5, 5.55, 5),
+(4, "lettuce", 2, 1.50, 9),
+(5, "coffee", 5, 16.99, 3),
+(6, "floss", 3, 1.99, 25),
+(7,"mangos", 4, 5.67, 15),
+(8, "bread", 9, 2.99, 10),
+(9, "peanuts", 4, 0.99, 25),
+(10, "rice", 5, 18.95, 10),
+(11, "noodles", 5, 2.91, 7),
+(12, "tomatoes", 4, 1.37, 14),
+(13, "chips", 7, 4.95, 6),
+(14, "water", 1, 2.75, 15),
+(15, "salt", 6, 3.79, 4);
+
+-- order the items in the store by aisle numbers
+Select * FROM store order by aisle asc;
+
+--order the items by price
+Select * from store order by price asc; 
+
+-- items in aisle 1-5, in ascending order
+Select * from store where aisle <= 5 order by aisle asc;
